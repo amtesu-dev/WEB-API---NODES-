@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS clientes (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  sobrenome VARCHAR(120) NOT NULL,
+  idade TINYINT UNSIGNED NOT NULL,
+  cidade VARCHAR(120) NOT NULL,
+  uf CHAR(2) NOT NULL,
+  criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  atualizado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO clientes (nome, sobrenome, idade, cidade, uf) VALUES
+  ('Ana', 'Silva', 28, 'São Paulo', 'SP'),
+  ('Bruno', 'Santos', 34, 'Gravataí', 'RS');
